@@ -12,7 +12,9 @@ const SlickSlider: FC = () => {
 	const banner = useSelector((state: RootState) => state.appSlice.banner);
 	useEffect(() => {
 		dispacth(actions.getHomeAtions());
-		if (banner.length > 0) {
+	}, []);
+	useEffect(() => {
+		if (banner?.length > 0) {
 			const sliderEls = document.getElementsByClassName(
 				'slider-item'
 			) as HTMLCollectionOf<HTMLElement>;
@@ -21,7 +23,6 @@ const SlickSlider: FC = () => {
 			const intervalId = setInterval(() => {
 				const list = getArrSlider(min, max, sliderEls.length - 1);
 				for (let i = 0; i < sliderEls.length; i++) {
-					// Delete classnames (css)
 					sliderEls[i]?.classList?.remove(
 						'animate-slide-right',
 						'order-last',
@@ -37,15 +38,12 @@ const SlickSlider: FC = () => {
 						'order-2',
 						'z-10'
 					);
-
-					// Hide or Show images
 					if (list.some((item) => item === i)) {
 						sliderEls[i].style.cssText = `display: block`;
 					} else {
 						sliderEls[i].style.cssText = `display: none`;
 					}
 				}
-				// Add animation by adding classnames
 				list.forEach((item) => {
 					if (item === max) {
 						sliderEls[item]?.classList?.add(
@@ -74,8 +72,7 @@ const SlickSlider: FC = () => {
 				intervalId && clearInterval(intervalId);
 			};
 		}
-	}, []);
-
+	}, [banner]);
 	return (
 		<div className="flex gap-4 w-full overflow-hidden px-[59px] pt-8">
 			{banner?.map((item: itemBannerProps, index) => (
