@@ -1,0 +1,9 @@
+:root {
+	--layout-bg: #170f23;
+	--sidebar-popup-bg: #2a213a;
+	--alpha-bg: hsla(0, 0%, 100%, 0.1);
+	--purple-primary: #9b4de0;
+	--text-item-hover: #fff;
+	--navigation-text: #dadada;
+	--primary-bg: #34224f;
+}

@@ -1,0 +1,5 @@
+export {default as KhamPhaIcon} from "./icon-js/kham-pha"
+export {default as RadioIcon} from "./icon-js/radio"
+export {default as ThuvienIcon} from "./icon-js/thu-vien"
+export {default as Zingmp3Icon} from "./icon-js/zing-mp3-icon"
+export {default as ZingchartIcon} from "./icon-js/zingchart"

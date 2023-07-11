@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('./_value.css');
+
+.center-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.center-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+body {
+	/* background-color: var(--layout-bg); */
+	color: black;
+	font-family: 'Inter', sans-serif;
+}
+.zm-sidebar {
+	background-color: var(--sidebar-popup-bg);
+	position: fixed;
+}
+.alpha-bg {
+	background-color: var(--alpha-bg);
+}
+.is-active {
+	background-color: var(--alpha-bg);
+	color: var(--text-item-hover);
+	border-color: var(--purple-primary);
+}
+.text-navi {
+	color: var(--navigation-text);
+}
+.search-bar input {
+	background-color: transparent;
+	outline: none;
+	font-size: 14px;
+}
+.search-bar {
+	background-color: var(--primary-bg);
+	display: flex;
+	align-items: center;
+	height: 40px;
+	padding: 5px;
+	border-radius: 20px;
+	width: 100%;
+	max-width: 440px;
+}
